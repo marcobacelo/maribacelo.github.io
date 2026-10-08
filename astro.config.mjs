@@ -3,11 +3,11 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
-// Project GitHub Pages: https://maribacelo.github.io/maribacelo/
-// CI overrides --site / --base via actions/configure-pages when needed.
+// User GitHub Pages: https://maribacelo.github.io/
+// CI may still pass --site / --base from actions/configure-pages.
 export default defineConfig({
   site: 'https://maribacelo.github.io',
-  base: '/maribacelo',
+  base: '/',
   output: 'static',
   trailingSlash: 'always',
   integrations: [react()],
@@ -15,4 +15,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 });
+
 
